@@ -4,7 +4,14 @@ module.exports = {
     browser: true,
     node: true,
   },
-  extends: ['eslint:recommended', 'plugin:vue/vue3-recommended', 'plugin:@typescript-eslint/recommended', 'plugin:nuxt/recommended', 'prettier'],
+  extends: [
+    '@nuxt/eslint-config',
+    'eslint:recommended',
+    'plugin:vue/vue3-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:nuxt/recommended',
+    'prettier',
+  ],
   parserOptions: {
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
@@ -42,7 +49,7 @@ module.exports = {
       'error',
       {
         singleQuote: true,
-        semi: false,
+        semi: true,
         tabWidth: 2,
         trailingComma: 'es5',
       },
