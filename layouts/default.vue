@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ClientOnly> <NavbarComponent v-if="!excludedRoutes.includes(route.path)" /> </ClientOnly>
+    <NavbarComponent v-if="!excludedRoutes.includes(route.path)" />
     <slot />
     <Toaster />
   </div>
@@ -10,5 +10,5 @@
 import NavbarComponent from '@/components/fragments/NavbarComponent.vue';
 
 const route = useRoute();
-const excludedRoutes = ['/login', '/register'];
+const excludedRoutes = ['/login', '/register', '/play', '/result'];
 </script>

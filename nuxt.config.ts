@@ -7,6 +7,9 @@ export default defineNuxtConfig({
     public: {
       loginURL: process.env.LOGIN_URL,
       registerURL: process.env.REGISTER_URL,
+      createRoomURL: process.env.CREATE_ROOM_URL,
+      joinRoomURL: process.env.JOIN_ROOM_URL,
+      getRoomsURL: process.env.GET_ROOMS_URL,
     },
   },
   app: {

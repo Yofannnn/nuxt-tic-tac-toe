@@ -5,10 +5,12 @@
       <li>
         <NuxtLink to="/room" class="font"> Play </NuxtLink>
       </li>
-      <li @click="colorMode.preference = colorMode.value === 'light' ? 'dark' : 'light'">
-        <SunIcon v-if="colorMode.value === 'light'" class="size-4" />
-        <MoonIcon v-if="colorMode.value === 'dark'" class="size-4" />
-      </li>
+      <ClientOnly>
+        <li @click="colorMode.preference = colorMode.value === 'light' ? 'dark' : 'light'">
+          <SunIcon v-if="colorMode.value === 'light'" class="size-4" />
+          <MoonIcon v-if="colorMode.value === 'dark'" class="size-4" />
+        </li>
+      </ClientOnly>
       <li>
         <NuxtLink to="/login" class="p-1.5 rounded-full border-foreground border inline-block"><PersonIcon class="size-5" /></NuxtLink>
       </li>
