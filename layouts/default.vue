@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NavbarComponent v-if="!excludedRoutes.includes(route.path)" />
+    <NavbarComponent v-if="!excludedRoutes.some((excluded) => route.path.startsWith(excluded))" />
     <slot />
     <Toaster />
   </div>

@@ -10,12 +10,15 @@ export default defineNuxtConfig({
       createRoomURL: process.env.CREATE_ROOM_URL,
       joinRoomURL: process.env.JOIN_ROOM_URL,
       getRoomsURL: process.env.GET_ROOMS_URL,
+      getMatchHistoryURL: process.env.GET_MATCH_HISTORY_URL,
+      connectWebSocketGameURL: process.env.CONNECT_WEB_SOCKET_GAME_URL,
     },
   },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
   },
   modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt', '@nuxtjs/color-mode'],
+  plugins: ['~/plugins/socket'],
   colorMode: {
     preference: 'system',
     fallback: 'light',
