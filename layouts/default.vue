@@ -10,5 +10,5 @@
 import NavbarComponent from '@/components/fragments/NavbarComponent.vue';
 
 const route = useRoute();
-const excludedRoutes = ['/login', '/register', '/play', '/result'];
+const excludedRoutes = ['/login', '/register', '/dashboard', '/play', '/result'];
 </script>
